@@ -1,0 +1,20 @@
+ <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Vertical line -->
+    <line x1="20" y1="10" x2="20" y2="250" stroke="#aaa" stroke-width="1" />
+    
+    <!-- Horizontal line with arrow -->
+    <line x1="20" y1="250" x2="160" y2="250" stroke="#aaa" stroke-width="1" marker-end="url(#arrowhead)" />
+
+    <!-- Arrowhead definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5"
+        orient="auto" markerUnits="strokeWidth">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#aaa" />
+      </marker>
+    </defs>
+
+    <!-- Text -->
+    <text x="170" y="255" fill="#aaa" font-family="Arial, sans-serif" font-size="16" alignment-baseline="middle">
+      Start Your Journey Today
+    </text>
+  </svg>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Caveat:wght@400..700&family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navigation">
+      <div class="container main">
+        <div class="container bar">
+          <!-- ARIA (Accessible Rich Internet Applications) -->
+          <!-- aria-current="page" ===>>> Tells screen readers this is the current active page (for accessibility). -->
+          <!-- aria-label="home" ===>>> Improves accessibility, indicating the link goes to the homepage. -->
+          <div class="mylogo">
+            <img src="./logo.jpg" alt="mylogo" id="mylogo" width="70px" />
+            <a href="/" class="logo" aria-current="page" aria-label="home">
+              <h1 class="logo name">Bhardwaj Rai</h1>
+            </a>
+          </div>
+
+          <label for="hamburger-icon" class="menu">☰</label>
+          <input type="checkbox" id="hamburger-icon" hidden />
+
+          <nav class="navbar" role="navigation">
+            <!-- this inchecks the previous menu to close -->
+            <label for="hamburger-icon" class="close">✕</label>
+            <a href="./index.html" class="sidebar">projects</a>
+            <a href="./index.html" class="sidebar">resume</a>
+            <a href="./index.html" class="sidebar contact">get in touch</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="maindiv">
+      <div class="herophoto">
+        <img src="./iskon.jpg" alt="Hero Photo" width="303"/>
+      </div>
+      <div class="herocontent">
+        <p>
+          <p id="Ambition">Introduction: </p>
+          I’m Bhardwaj Rai, a passionate 2nd-year Computer Engineering student
+          exploring the world of software development. Currently focused on
+          mastering Python, JavaScript, and full-stack web development, I also
+          have a solid foundation in C, C++, and Java. I'm actively building
+          real-world projects, aiming to grow as a versatile developer ready for
+          internships, freelance work, and long-term career opportunities in
+          tech.
+        </p>
+      </div>
+
+      <div class="ambitioncontent">
+        <p>
+        <p id="Ambition">Ambition: </p>My journey into tech started with curiosity and a desire to
+        create meaningful things using code. Although I started slowly and
+        wasn’t very active in the beginning, I’ve now committed myself to
+        consistent learning and growth. I’ve built a foundation in C++, Java,
+        and web technologies, and I’m currently focused on strengthening my
+        skills in Python, JavaScript, and full-stack development. My goal is to
+        become a skilled software developer with strong problem-solving
+        abilities, build real-world projects, contribute to open-source, and
+        gain experience through internships, freelancing, and eventually a
+        high-impact role in a top tech company.
+      </div>
+      <div class="ambitionimage">
+        <video src="./ironman.mp4" autoplay loop muted width="100%" height="100%"></video>
+      </div>
+
+      <div class="skillphoto">
+        <video src="./Coding.mp4" muted autoplay loop width="100%" height="100%"></video>
+      </div>
+      <div class="skillcontent">
+        <p id="Ambition">Skills: </p>
+        <p>💻 Programming Languages</p>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <p>🌐 Web Development</p>
+        <li>HTML</li>
+        <li>CSS</li>
+        <p>🎯 Currently Learning</p>
+        <li>Full-Stack Web Development</li>
+        <li>Python Problem Solving & Development</li>
+      </div>
+    </div>
+
+    <footer>
+        <li><a href="https://www.linkedin.com/in/bhardwaj-rai-43810931a/?trk=public-profile-join-page" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/raibhardwaj05" target="_blank">Github</a></li>
+        <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCKCHTgpgdWXLTZgkdMDRvqzKrBFmTGkXRfLlVGxfqVZPwGBLrwwGKhjDFDRtwltCkKCzbBV" target="_blank">Email</a></li>
+    </footer>
+  </body>
+</html>

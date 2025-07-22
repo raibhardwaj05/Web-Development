@@ -1,0 +1,461 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Sour Gummy, cursive;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  color: aliceblue;
+}
+
+.navigation {
+  position: sticky;
+  top: 0; /*to which it will be sticky*/
+  background-color: rgb(27, 27, 27);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  z-index: 999;
+}
+
+.bar {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 0.5fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mylogo {
+  display: flex;
+  padding-left: 20px;
+  grid-column: 1/2;
+}
+
+#mylogo {
+  border: 3px solid rgb(27, 27, 27);
+  /* border-radius: 10px; */
+  clip-path: circle();
+  object-fit: cover;
+}
+
+.navbar {
+  height: 40px;
+  margin: 10px;
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: 150px 200px 170px;
+  justify-items: center;
+  align-items: center;
+}
+
+.close {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: goldenrod;
+}
+
+h1 {
+  padding-left: 10px;
+  margin: 10px;
+}
+
+.mylogo h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact {
+  padding: 7px;
+  border: 2px solid goldenrod;
+  border-radius: 7px;
+}
+
+.menu {
+  display: none;
+  font-size: 24px;
+  color: aliceblue;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.maindiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 500px);
+  min-height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.herophoto {
+  width: 303px;
+  height: 303px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: center;
+  box-shadow: 7px 5px 15px 10px rgba(12, 78, 177, 0.836);
+}
+
+.herocontent {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 70px;
+  align-self: center;
+}
+
+.ambitioncontent {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+  padding: 70px;
+}
+
+.ambitionimage {
+  width: 303px;
+  height: 303px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  box-shadow: 7px 5px 15px 10px rgba(12, 78, 177, 0.836);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: center;
+}
+
+.skillphoto {
+  width: 303px;
+  height: 303px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  box-shadow: 7px 5px 15px 10px rgba(12, 78, 177, 0.836);
+  grid-column: 1/2;
+  grid-row: 3/4;
+  align-self: center;
+}
+
+.skillcontent {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: center;
+  padding: 70px;
+}
+
+.ambitionimage > video,
+.skillphoto > video {
+  object-fit: cover;
+  object-position: bottom;
+  filter: brightness(100%) blur(2px);
+}
+
+#Ambition {
+  font-size: 1.5em;
+}
+
+.skillcontent > p {
+  font-size: 1.2em;
+}
+
+footer {
+  background-color: rgba(1, 28, 53, 0.521);
+  height: 80px;
+  padding-top: 20px;
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  justify-items: center;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 840px) {
+  .menu {
+    display: block;
+    font-size: 24px;
+    color: aliceblue;
+    grid-column: 3/4;
+    align-self: end;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(27, 27, 27);
+    padding: 20px;
+
+    /* to hide */
+    right: -300px;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /* transition in right */
+    transition: right 0.3s cubic cubic-bezier(0.42, -0.01, 0.6, 0.99);
+    box-shadow: -5px 8px 10px rgba(255, 145, 0, 0.315);
+  }
+
+  /* Show navbar when checkbox is checked */
+  #hamburger-icon:checked ~ .navbar {
+    right: 0;
+  }
+
+  .close {
+    color: aliceblue;
+    font-size: 24px;
+    display: block;
+    cursor: pointer;
+    padding: 30px;
+    padding-left: 150px;
+  }
+
+  .sidebar {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .maindiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px 500px 450px 600px 450px 700px;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .herophoto {
+    width: 303px;
+    height: 303px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    box-shadow: 7px 5px 15px 10px rgba(12, 78, 177, 0.836);
+  }
+
+  .herocontent {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+    font-size: 24px;
+    padding: 40px;
+  }
+
+  .ambitionimage {
+    width: 303px;
+    height: 303px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 7px 5px 15px 10px rgba(12, 78, 177, 0.836);
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: center;
+  }
+
+  .ambitioncontent {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-self: center;
+    padding: 40px;
+    font-size: 24px;
+  }
+
+  .skillphoto {
+    width: 303px;
+    height: 303px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 7px 5px 15px 10px rgba(12, 78, 177, 0.836);
+    grid-column: 1/2;
+    grid-row: 5/6;
+    align-self: center;
+    margin-top: 100px;
+  }
+
+  .skillcontent {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    align-self: center;
+    margin: 0;
+    padding: 40px;
+    font-size: 24px;
+  }
+
+  footer {
+    background-color: rgba(1, 28, 53, 0.521);
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    justify-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  *{
+    box-sizing: border-box;
+  }
+  .menu {
+    display: block;
+    font-size: 20px;
+    color: aliceblue;
+    grid-column: 3/4;
+    align-self: end;
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+    max-width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(27, 27, 27);
+    padding: 15px;
+
+    /* to hide */
+    right: -300px;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /* transition in right */
+    transition: right 0.3s cubic cubic-bezier(0.42, -0.01, 0.6, 0.99);
+    box-shadow: -5px 8px 10px rgba(255, 145, 0, 0.315);
+  }
+
+  /* Show navbar when checkbox is checked */
+  #hamburger-icon:checked ~ .navbar {
+    right: 0;
+  }
+
+  .close {
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    padding: 30px;
+    padding-left: 100px;
+  }
+
+  .sidebar {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .maindiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 600px 350px 700px 350px 600px;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .herophoto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    box-shadow: 5px 4px 10px 8px rgba(12, 78, 177, 0.836);
+  }
+
+  .herocontent {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+    text-align: left;
+    padding: 40px;
+    font-size: 20px;
+  }
+
+  .ambitionimage {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 5px 4px 10px 8px rgba(12, 78, 177, 0.836);
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: center;
+  }
+
+  .ambitioncontent {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-self: center;
+    padding: 40px;
+    font-size: 20px;
+  }
+
+  .skillphoto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 5px 4px 10px 8px rgba(12, 78, 177, 0.836);
+    grid-column: 1/2;
+    grid-row: 5/6;
+    align-self: center;
+    /* margin-top: 150px; */
+  }
+
+  .skillcontent {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    align-self: center;
+    margin: 0;
+    padding: 40px;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  footer {
+    background-color: rgba(1, 28, 53, 0.521);
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    row-gap: 10px;
+    margin-top: 70px;
+  }
+}
